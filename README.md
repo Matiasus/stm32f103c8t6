@@ -3,7 +3,7 @@
 ## Install stlink
 Install stlink into /opt folder.
 
-```sh
+```
 # install libusb
 sudo apt-get install libusb-1.0-0-dev
 
