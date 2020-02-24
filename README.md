@@ -3,7 +3,7 @@
 ## Install stlink
 Install stlink into /opt folder.
 
-```sh
+```
 # install libusb
 sudo apt-get install libusb-1.0-0-dev
 
@@ -23,11 +23,11 @@ make clean
 cd build/Release && make install
 
 # install udev rules
-cp etc/udev/rules.d/49-stlinkv* /etc/udev/rules.d/
+sudo cp etc/udev/rules.d/49-stlinkv* /etc/udev/rules.d/
 
 # restart sudo restart udev
-udevadm control --reload
+sudo udevadm control --reload
 
 # trigger
-udevadm trigger
+sudo udevadm trigger
 ```
