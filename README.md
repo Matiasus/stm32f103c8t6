@@ -30,10 +30,8 @@ sudo udevadm control --reload
 
 # trigger
 sudo udevadm trigger
-```
 
-If occurs **st-info: error while loading shared libraries: libstlink.so.1:cannot open shared object file: No such file or directory.** solve with
-```
-# 
+# If error occurs
+# st-info: error while loading shared libraries: libstlink.so.1:cannot open shared object file: No such file or directory
 sudo ldconfig
 ```
