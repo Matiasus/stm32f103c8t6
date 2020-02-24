@@ -1,2 +1,2 @@
-# Introdution to stm32f103c8t6 under Ubuntu 18.04
+# STM32F103C8T6 / Ubuntu 18.04
 
