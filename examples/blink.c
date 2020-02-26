@@ -66,7 +66,7 @@ void wait(void)
 void LedBlink_GPIOA_Pin2() 
 {
   // enable clock for corresponding GPIO
-  RCC->APB2ENR |= RCC_APB2Periph_GPIOA;
+  RCC->APB2ENR |= RCC_APB2ENR_IOPAEN;
  
   // ----------------------------
   // CNF[1:0] = 00 -> Push pull  / GENERAL PURPOSE OUTPUT - MODE[1:0] = 01; 10; 11
