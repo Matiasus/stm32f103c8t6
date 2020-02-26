@@ -21,11 +21,11 @@
 /**
  * @desc    Delay
  *
- * @param   uint32_t
+ * @param   void
  * @return  void
  */
-void mDelay(uint32_t timelapse);
- 
+void wait(void);
+
 /**
  * @desc    Led blinking on GPIOA Pin 2
  *
@@ -65,9 +65,6 @@ void wait(void)
  */
 void LedBlink_GPIOA_Pin2() 
 {
-  // cycles  
-  uint32_t cycles = 200000;
-
   // enable clock for corresponding GPIO
   RCC->APB2ENR |= RCC_APB2Periph_GPIOA;
  
