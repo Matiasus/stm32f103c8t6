@@ -36,6 +36,6 @@ sudo udevadm trigger
 #          cannot open shared object file: No such file or directory
 sudo ldconfig
 ```
-# Acknowledgement
+## Acknowledgement
 - [Geoffrey Brown](https://github.com/geoffreymbrown/STM32-Template)
 - [STM32 microcontroller #1: toolchain & LED blink](http://emsyfs.blogspot.com/2016/03/stm32-microcontroller-1-toolchain-led.html)
