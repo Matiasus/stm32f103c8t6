@@ -80,7 +80,7 @@ void LedBlink_GPIOA_Pin2()
   // ----------------------------
   //
   // GPIOA.Pin_2 - Output push pull
-  GPIOA->CRL = ~(GPIO_CRL_CNF2);
+  GPIOA->CRL &= ~(GPIO_CRL_CNF2);
   
   // MODE[1:0] = 01 // 10 MHz
   // MODE[1:0] = 10 //  2 MHz
