@@ -8,7 +8,9 @@
  * @datum       08.03.2020
  * @file        spi.c
  * @tested      stm32f103c6t8
- * @inspiration 
+ * @inspiration https://github.com/nalepae/stm32_tutorial/blob/master/src/spi.c
+ *              https://learnbuildshare.wordpress.com/about/stm32/using-spi-as-master/
+ *              http://www.handsonembedded.com/stm32f103-spl-tutorial-5/
  * -------------------------------------------------
  */
 
