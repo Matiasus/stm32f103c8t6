@@ -15,7 +15,7 @@
  
 // libraries
 #include <stm32f10x.h>
-#include "../Library/spi.h"
+#include "lib/spi.h"
 
 /**
  * @desc    Main
