@@ -1,4 +1,4 @@
-/** 
+/**
  * SPI Library
  *
  * Copyright (C) 2020 Marian Hrinko.
@@ -40,5 +40,38 @@
    * @return  void
    */
   void SPI1_Init(void);
+  
+  /**
+   * @desc    Stop SPI1
+   *
+   * @param   void
+   * @return  void
+   */
+  void SPI1_Disable(void);
+
+  /**
+   * @desc    Send 8 bits
+   *
+   * @param   unit8_t
+   * @return  void
+   */
+  void SPI1_TX_8bits(uint8_t);
+
+  /**
+   * @desc    Receive 8 bits
+   *
+   * @param   void
+   * @return  uint8_t
+   */
+  uint8_t SPI1_RX_8bits(void);
+
+  /**
+   * @desc    Transmission / receive array of data
+   *
+   * @param   unit8_t *
+   * @param   unit8_t
+   * @return  unit8_t
+   */
+  uint8_t * SPI1_TX_RX_8bits(uint8_t *, uint8_t);
 
 #endif
