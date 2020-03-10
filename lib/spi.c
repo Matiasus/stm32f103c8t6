@@ -1,4 +1,4 @@
-/** 
+/**
  * SPI Library
  *
  * Copyright (C) 2020 Marian Hrinko.
@@ -43,7 +43,7 @@ void SPI1_InitPins()
   // MODE[1:0] = 11 // 50 MHz
   // ----------------------------
 
-  // SCK  - GPIOA.5 - Alternate PUSH PULL 
+  // SCK  - GPIOA.5 - Alternate PUSH PULL
   // MOSI - GPIOA.7 - Alternate PUSH PULL
   GPIOA->CRL |= GPIO_CRL_CNF5_1 | GPIO_CRL_CNF7_1;
   // MISO - GPIOA.6 - Input PULL UP
@@ -79,7 +79,7 @@ void SPI1_InitSS()
   // MODE[1:0] = 11 // 50 MHz
   // ----------------------------
 
-  // SS  - GPIOA.3 - Output PUSH PULL 
+  // SS  - GPIOA.3 - Output PUSH PULL
   GPIOA->CRL &= ~GPIO_CRL_CNF3;
 
   // 50MHz
@@ -99,7 +99,7 @@ void SPI1_Init()
   // [15] BIDIMODE: Bidirectional data mode enable
   //   0: 2-line unidirectional data mode selected
   //   1: 1-line bidirectional data mode selected
-  // 
+  //
   // [14] BIDIOE: Output enable in bidirectional mode
   // This bit combined with the BIDImode bit selects the direction of transfer in bidirectional mode
   //    0: Output disabled (receive-only mode)
@@ -195,4 +195,76 @@ void SPI1_Init()
   SPI1->CR1 = SPI_CR1_SSM | SPI_CR1_BR_2 | SPI_CR1_MSTR;
   // enable SPI1
   SPI1->CR1 |= SPI_CR1_SPE;
+}
+
+/**
+ * @desc    Stop SPI1
+ *
+ * @param   void
+ * @return  void
+ */
+void SPI1_Disable(void)
+{
+  // wait till ready to load next data
+  while (!(SPI1->SR & SPI_SR_TXE));
+  // wait till data is received
+  while (!(SPI1->SR & SPI_SR_RXNE));
+  // check BUSY flag
+  while (SPI1->SR & SPI_SR_BSY);
+  // disable SPI1
+  SPI1->CR1 &= ~SPI_CR1_SPE;
+}
+
+/**
+ * @desc    Send 8 bits
+ *
+ * @param   unit8_t
+ * @return  void
+ */
+void SPI1_TX_8bits(uint8_t data)
+{
+  // fill SPI11 DATA REGISTER with data
+  SPI1->DR = data;
+  // wait till ready to load next data
+  while (!(SPI1->SR & SPI_SR_TXE));
+}
+
+/**
+ * @desc    Receive 8 bits
+ *
+ * @param   void
+ * @return  uint8_t
+ */
+uint8_t SPI1_RX_8bits(void)
+{
+  // wait till data is received
+  while (!(SPI1->SR & SPI_SR_RXNE));
+  // return data
+  return SPI1->DR;
+}
+
+/**
+ * @desc    Transmission / receive array of data
+ *
+ * @param   unit8_t *
+ * @param   unit8_t
+ * @return  unit8_t
+ */
+uint8_t * SPI1_TX_RX_8bits(uint8_t * data, uint8_t number)
+{
+  // wait till ready to load data
+  while (!(SPI1->SR & SPI_SR_TXE));
+  // loop through data array
+  for (uint8_t i = 0; i < number; i++) {
+    // send 8 bits
+    SPI1_TX_8bits(data[i]);
+    // store received data
+    data[i] = SPI1_RX_8bits();
+  }
+  // wait for ready to load next data
+  while (!(SPI1->SR & SPI_SR_TXE));
+  // check BUSY flag
+  while (SPI1->SR & SPI_SR_BSY);
+  // return received array of data
+  return data;
 }
