@@ -21,6 +21,7 @@
  * @desc    Init MOSI, MISO, SCK pins for SPI1
  *
  * @param   void
+ *
  * @return  void
  */
 void SPI1_InitPins()
@@ -57,6 +58,7 @@ void SPI1_InitPins()
  * @desc    Init SS pin for SPI1
  *
  * @param   void
+ *
  * @return  void
  */
 void SPI1_InitSS()
@@ -90,6 +92,7 @@ void SPI1_InitSS()
  * @desc    Init pins for SPI1
  *
  * @param   void
+ *
  * @return  void
  */
 void SPI1_Init()
@@ -201,6 +204,7 @@ void SPI1_Init()
  * @desc    Stop SPI1
  *
  * @param   void
+ *
  * @return  void
  */
 void SPI1_Disable(void)
@@ -219,6 +223,7 @@ void SPI1_Disable(void)
  * @desc    Send 8 bits
  *
  * @param   unit8_t
+ *
  * @return  void
  */
 void SPI1_TX_8bits(uint8_t data)
@@ -233,6 +238,7 @@ void SPI1_TX_8bits(uint8_t data)
  * @desc    Receive 8 bits
  *
  * @param   void
+ *
  * @return  uint8_t
  */
 uint8_t SPI1_RX_8bits(void)
@@ -248,15 +254,18 @@ uint8_t SPI1_RX_8bits(void)
  *
  * @param   unit8_t *
  * @param   unit8_t
- * @return  unit8_t
+ *
+ * @return  unit8_t *
  */
-uint8_t * SPI1_TX_RX_8bits(uint8_t * data, uint8_t number)
+uint8_t * SPI1_TRX_8bits(uint8_t * data, uint8_t number)
 {
+  // set initial value for clear TXE flag
+  SPI1->DR = 0xff;
   // wait till ready to load data
   while (!(SPI1->SR & SPI_SR_TXE));
   // loop through data array
   for (uint8_t i = 0; i < number; i++) {
-    // send 8 bits
+    // send data
     SPI1_TX_8bits(data[i]);
     // store received data
     data[i] = SPI1_RX_8bits();

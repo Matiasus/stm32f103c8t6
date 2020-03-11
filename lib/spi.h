@@ -21,6 +21,7 @@
    * @desc    Init pins for SPI1
    *
    * @param   void
+   *
    * @return  void
    */
   void SPI1_InitPins(void);
@@ -29,6 +30,7 @@
    * @desc    Init SS pin for SPI1
    *
    * @param   void
+   *
    * @return  void
    */
   void SPI1_InitSS(void);
@@ -37,6 +39,7 @@
    * @desc    Init SPI1
    *
    * @param   void
+   *
    * @return  void
    */
   void SPI1_Init(void);
@@ -45,6 +48,7 @@
    * @desc    Stop SPI1
    *
    * @param   void
+   *
    * @return  void
    */
   void SPI1_Disable(void);
@@ -53,6 +57,7 @@
    * @desc    Send 8 bits
    *
    * @param   unit8_t
+   *
    * @return  void
    */
   void SPI1_TX_8bits(uint8_t);
@@ -61,6 +66,7 @@
    * @desc    Receive 8 bits
    *
    * @param   void
+   *
    * @return  uint8_t
    */
   uint8_t SPI1_RX_8bits(void);
@@ -70,8 +76,9 @@
    *
    * @param   unit8_t *
    * @param   unit8_t
-   * @return  unit8_t
+   *
+   * @return  unit8_t *
    */
-  uint8_t * SPI1_TX_RX_8bits(uint8_t *, uint8_t);
+  uint8_t * SPI1_TRX_8bits(uint8_t *, uint8_t);
 
 #endif
