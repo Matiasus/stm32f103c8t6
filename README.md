@@ -5,7 +5,9 @@ Example of SPI1 communication with peripheral LCD display.
 C library is aimed for driving ST7735 1.8 TFT LCD display 162x132 through SPI's STM32f103C8T6.
 
 ### Usage
-Defined for microcontroller STM32f103C8T6. SPI1 alternate function remapping according to [RM0008 Reference manual](https://www.st.com/mwg-internal/de5fs23hu73ds/progress?id=4xg82YtTk42dgC33Uqaa4XQ5B_tXbY3NJjon9Bfhm7k,) (9.3.10, page 181).
+Defined for microcontroller STM32f103C8T6. 
+
+SPI1 alternate function remapping according to [RM0008 Reference manual](https://www.st.com/mwg-internal/de5fs23hu73ds/progress?id=4xg82YtTk42dgC33Uqaa4XQ5B_tXbY3NJjon9Bfhm7k,) (9.3.10, page 181).
 
 | PORT  | SPI1 | SPI1 remap | SPI2 |
 | :---: | :---: | :---: | :---: |
