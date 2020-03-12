@@ -27,7 +27,7 @@ SPI1 alternate function remapping according to [RM0008 Reference manual](https:/
 - [*void* **SPI1_Disable** *(void)*]() - disable spi communication
 - [*void* **SPI1_TX_8bits** *(uint8_t)*]() - transmit 8 bits
 - [*uint8_t* **SPI1_RX_8bits** *(void)*]() - receive 8 bits
-- [*uint8_t* * **SPI1_TRX_8bits** *(uint8_t \*), uint8_t)*]() - transmit and receive 8 bits
+- [*uint8_t* * **SPI1_TRX_8bits** *(uint8_t \*, uint8_t)*]() - transmit and receive 8 bits
 
 ## Acknowledgement
 - [Erwin Ouyang](http://www.handsonembedded.com/stm32f103-spl-tutorial-5/)
