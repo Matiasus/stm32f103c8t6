@@ -1,5 +1,5 @@
 # STM32F103C8T6 SPI Library
-Example of SPI1 communication with peripheral LCD display.
+Example of SPI1 communication with peripheral LCD display. Detailed information how to drive SPI on microcontroller STM32f103C8T6 is described in [RM0008 Reference manual](https://www.st.com/mwg-internal/de5fs23hu73ds/progress?id=4xg82YtTk42dgC33Uqaa4XQ5B_tXbY3NJjon9Bfhm7k,) and information about how to control LCD with ST7735 driver is described in [ST7735 Manual](http://www.displayfuture.com/Display/datasheet/controller/ST7735.pdf)
 
 ## Library
 C library is aimed for driving ST7735 1.8 TFT LCD display 162x132 through SPI's STM32f103C8T6.
