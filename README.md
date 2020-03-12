@@ -21,7 +21,7 @@ SPI1 alternate function remapping according to [RM0008 Reference manual](https:/
 | MOSI | PA7 | PB5 | PB15 |
 
 ### Functions
-- [void **SPI1_InitPins** ( void )]() - init SPI1 pins SCK, MISO, MOSI
+- void [SPI1_InitPins]() ( void ) - init SPI1 pins SCK, MISO, MOSI
 - [void SPI1_InitSS ( void )]() - init SPI1 pin SS (CS)
 - [void SPI1_Init ( void )]() - init SPI1 communication
 - [void SPI1_Disable ( void )]() - disable spi communication
