@@ -1,10 +1,11 @@
 # STM32F103C8T6 SPI Library
-Example of SPI1 communication. The serial peripheral interface (SPI) STM32f103C8T6 allows half / full-duplex, synchronous, serial
-communication with external devices. It may be used for a variety of purposes, including simplex synchronous transfers on two
-lines with a possible bidirectional data line or reliable communication using CRC checking. [RM0008 Reference manual](https://www.st.com/mwg-internal/de5fs23hu73ds/progress?id=4xg82YtTk42dgC33Uqaa4XQ5B_tXbY3NJjon9Bfhm7k,)
+Example of SPI1 communication with peripheral LCD display.
 
-# Usage
-Defined for microcontroller STM32f103C8T6. 
+## Library
+C library is aimed for driving ST7735 1.8 TFT LCD display 162x132 through SPI's STM32f103C8T6.
+
+### Usage
+Defined for microcontroller STM32f103C8T6. SPI1 alternate function remapping according to [RM0008 Reference manual](https://www.st.com/mwg-internal/de5fs23hu73ds/progress?id=4xg82YtTk42dgC33Uqaa4XQ5B_tXbY3NJjon9Bfhm7k,) (9.3.10, page 181).
 
 | PORT  | SPI1 | SPI1 remap | SPI2 |
 | :---: | :---: | :---: | :---: |
@@ -13,7 +14,7 @@ Defined for microcontroller STM32f103C8T6.
 | MISO | PA6 | PB4 | PB14 |
 | MOSI | PA7 | PB5 | PB15 |
 
-## SPI1 Library
+## Functions
 ```c
   /**
    * @desc    Init pins for SPI1
@@ -57,3 +58,4 @@ Defined for microcontroller STM32f103C8T6.
 
 ## Links
 - [RM0008 Reference manual](https://www.st.com/mwg-internal/de5fs23hu73ds/progress?id=4xg82YtTk42dgC33Uqaa4XQ5B_tXbY3NJjon9Bfhm7k,)
+- [ST7735 Manual](http://www.displayfuture.com/Display/datasheet/controller/ST7735.pdf)
