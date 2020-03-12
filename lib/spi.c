@@ -51,7 +51,9 @@ void SPI1_InitPins()
   GPIOA->CRL |= GPIO_CRL_CNF6;
 
   // 50MHz
-  GPIOA->CRL |= GPIO_CRL_MODE5 | GPIO_CRL_MODE7 | GPIO_CRL_MODE6;
+  GPIOA->CRL |= GPIO_CRL_MODE5 | GPIO_CRL_MODE7;
+  // 50MHz
+  GPIOA->CRL &= ~GPIO_CRL_MODE6;
 }
 
 /**
@@ -247,6 +249,32 @@ uint8_t SPI1_RX_8bits(void)
   while (!(SPI1->SR & SPI_SR_RXNE));
   // return data
   return SPI1->DR;
+}
+
+/**
+ * @desc    Slave select
+ *
+ * @param   void
+ *
+ * @return  void
+ */
+void SPI1_SS_High(void)
+{
+  // set slave select bit high
+  
+}
+
+/**
+ * @desc    Slave deselect
+ *
+ * @param   void
+ *
+ * @return  void
+ */
+void SPI1_SS_Low(void)
+{
+  // set slave select bit low
+  
 }
 
 /**
