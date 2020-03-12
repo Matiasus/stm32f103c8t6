@@ -8,7 +8,7 @@ C library is aimed for driving ST7735 1.8 TFT LCD display 162x132 through SPI's 
 Prior defined for microcontroller STM32f103C8T6. 
 
 ### Tested
-Library was tested and proved on a ST7735 1.8″ TFT Dispay with STM32f103C8T6.
+Library was tested and proved on a ST7735 1.8″ TFT display with STM32f103C8T6.
 
 ### Pinout
 SPI1 alternate function remapping according to [RM0008 Reference manual](https://www.st.com/mwg-internal/de5fs23hu73ds/progress?id=4xg82YtTk42dgC33Uqaa4XQ5B_tXbY3NJjon9Bfhm7k,) (9.3.10, page 181).
