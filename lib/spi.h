@@ -54,6 +54,24 @@
   void SPI1_Disable(void);
 
   /**
+   * @desc    Slave select
+   *
+   * @param   void
+   *
+   * @return  void
+   */
+  void SPI1_SS_High(void);
+
+  /**
+   * @desc    Slave deselect
+   *
+   * @param   void
+   *
+   * @return  void
+   */
+  void SPI1_SS_Low(void);
+
+  /**
    * @desc    Send 8 bits
    *
    * @param   unit8_t
