@@ -1,24 +1,25 @@
 # Start with stm32 in Ubuntu 20.04
 
 # Softwer
-- [libusb-1.0-0-dev](https://packages.ubuntu.com/search?lang=en&keywords=libusb-1.0-0-dev) - userspace USB programming library development files,
-- [Stlink](https://github.com/stlink-org/stlink) - open source toolset to program and debug STM32 devices and boards,
+- [libusb](https://packages.ubuntu.com/search?lang=en&keywords=libusb-1.0-0-dev) - userspace USB programming library development files,
+- [stlink](https://github.com/stlink-org/stlink) - open source toolset to program and debug STM32 devices and boards,
 - [The GNU Arm Embedded Toolchain](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) - is a ready-to-use, open-source suite of tools for C, C++ and assembly programming.
 
-## Install Stlink
-There are two possible ways described how to install [Stlink](https://github.com/stlink-org/stlink), e.g.:
-- using .deb package,
-- from source.
+## Install [libusb](https://packages.ubuntu.com/search?lang=en&keywords=libusb-1.0-0-dev)
+```console
+ubuntu@ubuntu:~$ sudo apt-get install libusb-1.0-0-dev
+```
+
+## Install [stlink](https://github.com/stlink-org/stlink)
+There are two possible ways described how to install [stlink](https://github.com/stlink-org/stlink), e.g.:
+- using [.deb package](https://github.com/Matiasus/stm32f103c8t6/edit/master/README.md#install_deb_package)
+- from [source](https://github.com/Matiasus/stm32f103c8t6/edit/master/README.md#install_from_source)
 
 ### Install .deb package
 Download and install [.deb](https://github.com/stlink-org/stlink/releases) package using Software Center. Another possible way to install stlink is described in section below.
 
 ### Install from source
-The first thing is installation libusb-1.0-0-dev.
-```console
-ubuntu@ubuntu:~$ sudo apt-get install libusb-1.0-0-dev
-```
-Next step is to install stlink into folder /opt
+Install stlink into folder `/opt`
 ```console
 ubuntu@ubuntu:~$ cd /opt
 ubuntu@ubuntu:~$ git clone https://github.com/texane/stlink.git
@@ -46,9 +47,14 @@ cannot open shared object file: No such file or directory.
 ubuntu@ubuntu:~$ sudo ldconfig
 ```
 
-## Install GNU Toolchain (Linux x86_64 Tarball)
-The GNU Arm Embedded toolchain contains integrated and validated packages featuring the GCC compiler, libraries, and other tools necessary for bare-metal software development. Create folder gcc-arm into folder /opt. Copy downloaded and extracted GNU Toolchain package into folder gcc-arm. Structure of folder /opt/gcc-arm should look like:
+## Install [GNU Toolchain](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads)
+The GNU Arm Embedded toolchain contains integrated and validated packages featuring the GCC compiler, libraries, and other tools necessary for bare-metal software development. 
 
+Download and extract [GNU Toolchain](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads). Then copy extracted files into folder `/opt/gcc-arm`:
+```console
+ubuntu@ubuntu:~$ sudo cp -a /home/<your name of home directory>/Downloads/<Extracted GNU Toolchain package>  /opt/gcc-arm
+```
+Structure of folder `/opt/gcc-arm` should look like:
 - arm-none-eabi
 - bin
 - lib
