@@ -1,9 +1,9 @@
 # Start with stm32 in Ubuntu 20.04
 
-# Softwer
-- [libusb](https://packages.ubuntu.com/search?lang=en&keywords=libusb-1.0-0-dev) - userspace USB programming library development files,
-- [stlink](https://github.com/stlink-org/stlink) - open source toolset to program and debug STM32 devices and boards,
-- [The GNU Arm Embedded Toolchain](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) - is a ready-to-use, open-source suite of tools for C, C++ and assembly programming.
+# Dependencies / Softwer
+- [Install libusb](https://github.com/Matiasus/stm32f103c8t6#install-libusb) - userspace USB programming library development files,
+- [Install stlink](https://github.com/Matiasus/stm32f103c8t6#install-stlink) - open source toolset to program and debug STM32 devices and boards,
+- [Install GNU Arm Embedded Toolchain](https://github.com/Matiasus/stm32f103c8t6#install-gnu-toolchain) - is a ready-to-use, open-source suite of tools for C, C++ and assembly programming.
 
 ## Install [libusb](https://packages.ubuntu.com/search?lang=en&keywords=libusb-1.0-0-dev)
 ```console
