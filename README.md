@@ -12,8 +12,8 @@ ubuntu@ubuntu:~$ sudo apt-get install libusb-1.0-0-dev
 
 ## Install [stlink](https://github.com/stlink-org/stlink)
 There are two possible ways described how to install [stlink](https://github.com/stlink-org/stlink), e.g.:
-- using [.deb package](https://github.com/Matiasus/stm32f103c8t6/edit/master/README.md#install_deb_package)
-- from [source](https://github.com/Matiasus/stm32f103c8t6/edit/master/README.md#install_from_source)
+- using [.deb package](https://github.com/Matiasus/stm32f103c8t6#install-deb-package)
+- from [source](https://github.com/Matiasus/stm32f103c8t6#install-from-source)
 
 ### Install .deb package
 Download and install [.deb](https://github.com/stlink-org/stlink/releases) package using Software Center. Another possible way to install stlink is described in section below.
