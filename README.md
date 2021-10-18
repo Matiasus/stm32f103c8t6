@@ -1,9 +1,11 @@
 # Start with stm32 in Ubuntu 20.04
 
 # Dependencies / Softwer
-- [Install libusb](https://github.com/Matiasus/stm32f103c8t6#install-libusb) - userspace USB programming library development files,
-- [Install stlink](https://github.com/Matiasus/stm32f103c8t6#install-stlink) - open source toolset to program and debug STM32 devices and boards,
-- [Install GNU Arm Embedded Toolchain](https://github.com/Matiasus/stm32f103c8t6#install-gnu-toolchain) - is a ready-to-use, open-source suite of tools for C, C++ and assembly programming.
+- [Install libusb](https://github.com/Matiasus/stm32f103c8t6#install-libusb) - userspace USB programming library development files
+- [Install stlink](https://github.com/Matiasus/stm32f103c8t6#install-stlink) - open source toolset to program and debug STM32 devices and boards
+- [Install GNU Arm Embedded Toolchain](https://github.com/Matiasus/stm32f103c8t6#install-gnu-toolchain) - is a ready-to-use, open-source suite of tools for C, C++ and assembly programming
+- [STM32-Template](https://github.com/geoffreymbrown/STM32-Template) - according to Geoffrey Brown stm32 template
+- [Standard Periheral Library](https://www.st.com/content/st_com/en/products/embedded-software/mcu-mpu-embedded-software/stm32-embedded-software/stm32-standard-peripheral-libraries/stsw-stm32054.html) - the Library includes a complete register address mapping with all bits, bitfields and registers declared in C a collection of routines and data structures covering all peripheral functions (drivers with common API)
 
 ## Install [libusb](https://packages.ubuntu.com/search?lang=en&keywords=libusb-1.0-0-dev)
 ```console
